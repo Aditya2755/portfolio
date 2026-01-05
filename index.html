@@ -446,6 +446,45 @@
             transition: width 0.1s;
         }
 
+        /* Experience Card */
+        .experience-card {
+            background: rgba(51, 255, 51, 0.02);
+            border: 1px solid var(--green-dim);
+            padding: 25px;
+            position: relative;
+        }
+
+        .exp-header {
+            margin-bottom: 20px;
+        }
+
+        .exp-title {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .responsibility-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--cyan);
+            background: rgba(0, 255, 255, 0.03);
+        }
+
+        .resp-title {
+            color: var(--cyan);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .resp-content {
+            color: var(--green);
+            font-size: 18px;
+            line-height: 1.8;
+            padding-left: 10px;
+        }
+
         /* Badge */
         .badge {
             display: inline-block;
@@ -668,6 +707,147 @@
                     </a>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <span>experience.log</span>
+                <div class="terminal-buttons">
+                    <span class="terminal-btn"></span>
+                    <span class="terminal-btn"></span>
+                    <span class="terminal-btn"></span>
+                </div>
+            </div>
+            <div class="terminal-body">
+                <div class="section-header">EXPERIENCE</div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <pre style="color: var(--cyan); font-size: 14px; margin-bottom: 10px;">
+    ____  ___   ________ __ _______   ________ 
+   / __ )/   | / ____/ //_// ____/ | / / __ \ 
+  / __  / /| |/ /   / ,<  / __/ /  |/ / / / /  
+ / /_/ / ___ / /___/ /| |/ /___/ /|  / /_/ /   
+/_____/_/  |_\____/_/ |_/_____/_/ |_/_____/    
+                                               
+  ███████╗███╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗███████╗██████╗ 
+  ██╔════╝████╗  ██║██╔════╝ ██║████╗  ██║██╔════╝██╔════╝██╔══██╗
+  █████╗  ██╔██╗ ██║██║  ███╗██║██╔██╗ ██║█████╗  █████╗  ██████╔╝
+  ██╔══╝  ██║╚██╗██║██║   ██║██║██║╚██╗██║██╔══╝  ██╔══╝  ██╔══██╗
+  ███████╗██║ ╚████║╚██████╔╝██║██║ ╚████║███████╗███████╗██║  ██║
+  ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝  ╚═╝
+                        </pre>
+                        <div class="exp-title">
+                            <span style="color: var(--cyan); font-size: 24px;">BACKEND ENGINEER INTERN</span>
+                            <span class="badge">3 MONTHS</span>
+                        </div>
+                        <div style="color: var(--amber); font-size: 18px; margin-top: 5px;">
+                            Legal Tech Startup
+                        </div>
+                    </div>
+
+                    <pre style="color: var(--green-dim); font-size: 16px; margin: 20px 0;">
+$ cat summary.txt
+
+> Built the entire backend infrastructure for India's
+> largest legal document search platform
+                    </pre>
+
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <div class="stat-number">16M</div>
+                            <div class="stat-label">JUDGMENTS</div>
+                            <div style="color: var(--green-dim); font-size: 14px;">indexed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30K</div>
+                            <div class="stat-label">ACTS</div>
+                            <div style="color: var(--green-dim); font-size: 14px;">curated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">&lt;200</div>
+                            <div class="stat-label">MS LATENCY</div>
+                            <div style="color: var(--green-dim); font-size: 14px;">search speed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">NODE</div>
+                            <div style="color: var(--green-dim); font-size: 14px;">cluster</div>
+                        </div>
+                    </div>
+
+                    <pre style="color: var(--amber); font-size: 16px; margin: 20px 0;">
+$ cat responsibilities.log
+                    </pre>
+
+                    <div class="responsibility-section">
+                        <div class="resp-title">[DATA PIPELINE]</div>
+                        <div class="resp-content">
+                            > Curated 16M Indian High Court & Supreme Court judgments<br>
+                            > Processed 30K Indian Acts (State + Central)<br>
+                            > Cleaned metadata using Pandas, bulk loaded into PostgreSQL<br>
+                            > Combined scattered JSON files into unified database schema
+                        </div>
+                    </div>
+
+                    <div class="responsibility-section">
+                        <div class="resp-title">[SEARCH INFRASTRUCTURE]</div>
+                        <div class="resp-content">
+                            > Indexed 16M PDFs in Elasticsearch using inverted index<br>
+                            > Built distributed batch processing across 4 machines<br>
+                            > Implemented deduplication & checkpoint tracking<br>
+                            > Optimized queries for &lt;200ms latency on 16M documents
+                        </div>
+                    </div>
+
+                    <div class="responsibility-section">
+                        <div class="resp-title">[API DEVELOPMENT]</div>
+                        <div class="resp-content">
+                            > Designed async FastAPI endpoints for search & retrieval<br>
+                            > Collaborated with frontend & mobile developers for integration<br>
+                            > Deployed backend infrastructure on Digital Ocean<br>
+                            > Managed 16M PDFs in cloud storage (DO Spaces)
+                        </div>
+                    </div>
+
+                    <div class="responsibility-section">
+                        <div class="resp-title">[AI PIPELINE]</div>
+                        <div class="resp-content">
+                            > Converted PDFs to Markdown using MinerU & Docling OCR<br>
+                            > Architected Elasticsearch as AI retrieval tool<br>
+                            > Prepared citation data for knowledge graph construction
+                        </div>
+                    </div>
+
+                    <pre style="color: var(--amber); font-size: 16px; margin: 20px 0 10px 0;">
+$ echo $TECH_STACK
+                    </pre>
+
+                    <div class="project-tags" style="margin-bottom: 15px;">
+                        <span class="tag">#Python</span>
+                        <span class="tag">#FastAPI</span>
+                        <span class="tag">#Async</span>
+                        <span class="tag">#Pandas</span>
+                        <span class="tag">#Elasticsearch</span>
+                        <span class="tag">#PostgreSQL</span>
+                        <span class="tag">#DigitalOcean</span>
+                        <span class="tag">#MinerU</span>
+                        <span class="tag">#Docling</span>
+                    </div>
+
+                    <pre style="color: var(--green-dim); font-size: 14px; text-align: center; margin-top: 20px;">
++--------------------------------------------------+
+|                                                  |
+|   "From 16M scattered PDFs to <200ms search"     |
+|                                                  |
+|            [ PRIVATE CODEBASE ]                  |
+|                                                  |
++--------------------------------------------------+
+                    </pre>
+
+                </div>
             </div>
         </div>
 
